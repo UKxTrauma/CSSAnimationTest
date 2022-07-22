@@ -17,16 +17,19 @@
 }
 
 #colour {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(77, 1, 1, 0.5);
     position: absolute;
     border-radius: 10%;
+    /* top: 43%;
+    right:45%;
+    bottom: 43%;
+    left:45%; */
     top: 30%;
     right:34%;
     bottom: 29.5%;
     left:34%;
     z-index: -1;
     transition: background-color 1s;
-    transition-timing-function: ease-in;
 }
 
 #mainContainer {
@@ -63,6 +66,11 @@
 }
 
 #yt:hover~#colour {
+    /* top: 30%;
+    right:34%;
+    bottom: 29.5%;
+    left:34%; */
+    /* animation: spread 1s ease; */
     animation: rainbow 20s infinite;
 }
 
@@ -184,6 +192,15 @@
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
+
+/* @keyframes spread {
+    0% {
+        transform: scaleX(120);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+} */
 
 @keyframes rainbow{
     100%,0%{
