@@ -12,22 +12,20 @@
     bottom: 0;
     left:0;
     z-index: -2;
-    transition: background-image 1s;
+    transition: background-image 0.1s;
     transition-timing-function: ease-out;
 }
 
 #colour {
     background-color: rgba(77, 1, 1, 0.5);
     position: absolute;
-    border-radius: 10%;
-    /* top: 43%;
-    right:45%;
-    bottom: 43%;
-    left:45%; */
-    top: 30%;
-    right:34%;
-    bottom: 29.5%;
-    left:34%;
+    top: 20vh;
+    right: 0;
+    bottom: 0;
+    left: 20vw;
+    border-radius: 15px;
+    width: 60vw;
+    height: 60vh;
     z-index: -1;
     transition: background-color 1s;
 }
@@ -40,18 +38,21 @@
 }
 
 #container {
+    width: 65vw;
+    height: 70vh;
     display: flex;
-    justify-content: center;
-    justify-content: space-around;
     flex-wrap: wrap;
-    align-content: center;
-    height: 40%;
+    align-content: space-between;
+    justify-content: space-between;
     background-color: rgba(240, 248, 255, 0);
+}
+
+#container img {
+    width: 8vw;
 }
 
 #yt {
     order: 1;
-    width: 30%;
     margin-right: 20%;
     background: none;
     border: none;
@@ -66,17 +67,11 @@
 }
 
 #yt:hover~#colour {
-    /* top: 30%;
-    right:34%;
-    bottom: 29.5%;
-    left:34%; */
-    /* animation: spread 1s ease; */
     animation: rainbow 20s infinite;
 }
 
 #fb {
     order: 2;
-    width: 30%;
     margin-left: 20%;
     background: none;
     border: none;
@@ -96,9 +91,8 @@
 
 #cn {
     order: 3;
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-left: 28.5vw;
+    margin-right: 16vw;
     background: none;
     border: none;
 }
@@ -117,7 +111,6 @@
 
 #tw {
     order: 4;
-    width: 30%;
     margin-right: 20%;
     background: none;
     border: none;
@@ -137,7 +130,6 @@
 
 #ig {
     order: 5;
-    width: 30%;
     margin-left: 20%;
     background: none;
     border: none;
@@ -153,6 +145,24 @@
 
 #ig:hover~#colour {
     animation: rainbow 20s infinite;
+}
+
+@media (orientation: portrait) {
+    #colour {
+        height: 52vh;
+        top: 24vh;
+    }
+    #container {
+        width: 70vw;
+        height: 60vh;
+    }
+    #container img {
+        width: 8vh;
+    }
+    #cn {
+        margin-left: 25vw;
+        margin-right: 16vw;
+    }
 }
 
 @keyframes spin {
@@ -192,15 +202,6 @@
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
-
-/* @keyframes spread {
-    0% {
-        transform: scaleX(120);
-    }
-    100% {
-        transform: scaleX(0);
-    }
-} */
 
 @keyframes rainbow{
     100%,0%{
