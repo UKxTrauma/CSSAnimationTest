@@ -6,7 +6,10 @@
 #background {
     background-image: url("background.jpg");
     background-size: cover;
-    position:absolute;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
     top: 0;
     right:0;
     bottom: 0;
@@ -158,10 +161,6 @@
     }
     #container img {
         width: 8vh;
-    }
-    #cn {
-        margin-left: 25vw;
-        margin-right: 16vw;
     }
 }
 
